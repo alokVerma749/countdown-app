@@ -20,6 +20,7 @@ btnStart.addEventListener("click", function start() {
     output.classList.remove("hidden");
 
     time = Number(content.value);
+    time = Math.round(time);
     // calling countdown function on regular interval of 1 second.
     clearInterval(interval);
     interval = setInterval(countDown, 1000);
@@ -69,8 +70,9 @@ function invalidTime(time) {
 }
 
 /** 
- * ******************************CORNER CASES**********************************************
- * when timer reache 0 the value in input field should become 0.
+ * ******************************Edge CASES**********************************************
+ * when timer reaches 0 the value in input field should become 0.(DONE)
+ * what is input is decimal value(DONE)
  * if time entered is NAN (DONE)
  * if time = 0 (DONE)
  * if time = undefined (DONE)
