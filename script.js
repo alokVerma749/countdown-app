@@ -27,8 +27,9 @@ btnStart.addEventListener("click", function start() {
 });
 
 function countDown() {
+    error.classList.add("hidden");
     // handling corner case of if the time <=0 or undefined(no entered value) by user.
-    if (time <= 0 || time === undefined || invalidTime(time)) {
+    if (time <= 0 || time === undefined) {
         onComplete.classList.remove("hidden");
         container.style.backgroundColor = "red";
         clearInterval(interval);
